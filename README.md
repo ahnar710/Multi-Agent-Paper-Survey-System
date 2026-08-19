@@ -75,7 +75,8 @@ Reader Agent 会将模型输出解析为 `ResearchCard`。如果第一次输出�
 ## 最简单的启动方式
 
 - macOS：双击 `start_mac.command`
-- Windows：双击 `start_windows.bat`
+- Windows（推荐 Docker）：双击 `start_windows_docker.bat`
+- Windows（已安装 Python 3.11+）：双击 `start_windows.bat`
 - Docker：运行 `docker compose up --build`
 
 打开 `http://127.0.0.1:7860`，在网页内填写 DeepSeek API Key。详细操作、

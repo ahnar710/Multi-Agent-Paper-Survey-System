@@ -122,6 +122,7 @@ Docker Compose 使用 `./data:/app/data` 把本机目录挂载进容器。删除
 | `.env.example` | 环境变量示例；复制后再填自己的 Key |
 | `start_mac.command` | macOS 本地 Python 一键启动 |
 | `start_windows.bat` | Windows 本地 Python 一键启动 |
+| `start_windows_docker.bat` | Windows Docker 一键构建、启动并打开网页 |
 | `src/` | 正式产品源码 |
 | `tests/` | 自动测试，防止修改后破坏原功能 |
 | `config/` | 研究主题和业务配置 |
@@ -129,15 +130,14 @@ Docker Compose 使用 `./data:/app/data` 把本机目录挂载进容器。删除
 | `examples/` | 可用于学习和测试的示例输入输出 |
 | `data/` | 持久化运行数据；部署时必须保留 |
 | `scripts/` | 制作安全交付包的维护脚本 |
-| `artifact.md`、`build_weekly_report.py`、`add_paper_reading_to_weekly_report.py` | 项目早期周报辅助材料，不参与当前 Web 工作流 |
-
 `.venv/`、`__pycache__/`、`*.egg-info/` 是本机生成物，不是源代码，也不应放进交付包。
 
 ## 9. 如何部署到另一台电脑
 
 推荐 Docker，因为它把 Python 和依赖版本一起封装：
 
-1. 把 `dist/论文调研多Agent系统-v0.1.0.zip` 发给对方。
+1. 把 `dist/paper-research-agents-v0.1.0.zip` 发给对方。交付包使用英文文件名，
+   避免部分 Windows 解压工具错误处理中文路径。
 2. 对方安装 Docker Desktop并启动它。
 3. 解压压缩包，打开终端并进入解压后的项目目录。
 4. 运行 `docker compose up --build -d`。
@@ -153,4 +153,3 @@ Docker Compose 使用 `./data:/app/data` 把本机目录挂载进容器。删除
 - 本地 Python：代码直接在电脑上运行，需要 Python 3.11+ 和虚拟环境，便于开发。
 - Docker：代码在容器中运行，只要求 Docker，最适合交付和演示。
 - 两者的网页和业务流程相同；不要同时占用 7860 端口。
-

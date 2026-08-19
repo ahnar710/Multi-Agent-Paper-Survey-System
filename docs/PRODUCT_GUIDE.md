@@ -13,7 +13,8 @@
 
 1. 启动程序。
    - macOS 双击项目里的 `start_mac.command`。
-   - Windows 双击 `start_windows.bat`。
+   - Windows Docker 用户双击 `start_windows_docker.bat`（推荐）。
+   - Windows 本地 Python 用户双击 `start_windows.bat`。
    - Docker 用户运行 `docker compose up --build`。
 2. 浏览器打开 `http://127.0.0.1:7860`。
 3. 填写自己的 DeepSeek API Key。Key 仅放在当前进程内存，不写入数据库。
@@ -110,9 +111,10 @@ LangGraph 没有替代所有自研代码。它适合管理“检索→筛选→�
 
 ### Windows
 
-安装 Python 3.11 或更高版本，解压项目后双击 `start_windows.bat`。首次运行会创建
-`.venv` 并安装依赖。Windows 防火墙询问时，只需允许本机网络；程序默认只监听
-`127.0.0.1`，局域网其他机器不能直接访问。
+推荐先安装并启动 Docker Desktop，然后双击 `start_windows_docker.bat`。如果不使用
+Docker，则安装 Python 3.11 或更高版本（安装时勾选 Add Python to PATH），解压项目
+后双击 `start_windows.bat`。首次运行会创建 `.venv` 并安装依赖。脚本发生错误时会
+保留窗口，方便复制完整报错。程序默认只监听本机地址。
 
 ### macOS
 
