@@ -1,0 +1,12 @@
+pydantic<3,>=2.10
+python-dotenv<2,>=1.0
+PyYAML<7,>=6.0
+langgraph<2,>=1.0
+langgraph-checkpoint-sqlite<4,>=3.0
+pypdf<7,>=6.0
+
+[dev]
+pytest<9,>=8.0
+
+[ui]
+gradio<7,>=6.0

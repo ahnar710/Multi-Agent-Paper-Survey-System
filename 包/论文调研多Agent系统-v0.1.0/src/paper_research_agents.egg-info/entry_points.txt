@@ -1,0 +1,3 @@
+[console_scripts]
+paper-agents = paper_agents.cli:main
+paper-agents-ui = paper_agents.ui.app:main
